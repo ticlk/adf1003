@@ -1,0 +1,24 @@
+{
+	"name": "HBase1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HBase",
+		"typeProperties": {
+			"host": "hbase1025.azurehdinsight.cn",
+			"port": 443,
+			"httpPath": "/hbaserest",
+			"authenticationType": "Basic",
+			"username": "admin",
+			"enableSsl": true,
+			"trustedCertPath": "",
+			"allowHostNameCNMismatch": true,
+			"allowSelfSignedServerCert": true,
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlNjg3YTM4Zi05ODY3LTQyZDEtOTQyMy1hMmRkMGIwZDY0NzQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

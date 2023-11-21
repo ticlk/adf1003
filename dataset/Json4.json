@@ -1,0 +1,67 @@
+{
+	"name": "Json4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "destination"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"LogicalServerName": {
+					"type": "string"
+				},
+				"SubscriptionId": {
+					"type": "string"
+				},
+				"ResourceGroup": {
+					"type": "string"
+				},
+				"time": {
+					"type": "string"
+				},
+				"resourceId": {
+					"type": "string"
+				},
+				"category": {
+					"type": "string"
+				},
+				"operationName": {
+					"type": "string"
+				},
+				"properties": {
+					"type": "object",
+					"properties": {
+						"event_class": {
+							"type": "string"
+						},
+						"event_subclass": {
+							"type": "string"
+						},
+						"connection_id": {
+							"type": "integer"
+						},
+						"db": {
+							"type": "string"
+						},
+						"table": {
+							"type": "string"
+						},
+						"sql_text": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
