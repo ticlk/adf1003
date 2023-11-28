@@ -16,4 +16,4 @@ jobs:
         run: |
           ls ${{ github.workspace }}/ADFroot/build/
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: python3 --version
+      - run: python3 ${{github.workspace}}/ADFroot/build/test.py
