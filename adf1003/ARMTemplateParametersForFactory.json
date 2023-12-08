@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf1003"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureMySql1_connectionString": {
+			"value": ""
+		},
+		"CosmosDbMongoDb1_connectionString": {
+			"value": ""
+		},
+		"CosmosDbMongoDb1_account": {
+			"value": ""
+		},
+		"CosmosDbMongoDb2_connectionString": {
+			"value": ""
+		},
+		"CosmosDbMongoDb2_account": {
+			"value": ""
+		},
+		"HBase1_password": {
+			"value": ""
+		},
+		"HBase2_password": {
+			"value": ""
+		},
+		"Hive1_password": {
+			"value": ""
+		},
+		"Sftp1_password": {
+			"value": ""
+		},
+		"linkedService1_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://storage0922.dfs.core.chinacloudapi.cn/"
+		},
+		"CosmosDbMongoDb1_properties_typeProperties_database": {
+			"value": "db"
+		},
+		"CosmosDbMongoDb2_properties_typeProperties_database": {
+			"value": "db"
+		},
+		"HBase1_properties_typeProperties_host": {
+			"value": "hbase1025.azurehdinsight.cn"
+		},
+		"HBase1_properties_typeProperties_username": {
+			"value": "admin"
+		},
+		"HBase2_properties_typeProperties_host": {
+			"value": "adx1120.azurehdinsight.cn"
+		},
+		"HBase2_properties_typeProperties_username": {
+			"value": "admin"
+		},
+		"Hive1_properties_typeProperties_host": {
+			"value": "hdi1023.azurehdinsight.cn"
+		},
+		"Hive1_properties_typeProperties_username": {
+			"value": "admin"
+		},
+		"Sftp1_properties_typeProperties_host": {
+			"value": "52.130.153.41"
+		},
+		"Sftp1_properties_typeProperties_userName": {
+			"value": "lihong"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"value": "admin"
+		}
+	}
+}

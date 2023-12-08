@@ -1,0 +1,223 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf1003"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureMySql1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureMySql1'"
+		},
+		"CosmosDbMongoDb1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'CosmosDbMongoDb1'"
+		},
+		"CosmosDbMongoDb1_account": {
+			"type": "secureString",
+			"metadata": "Secure string for 'account' of 'CosmosDbMongoDb1'"
+		},
+		"CosmosDbMongoDb2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'CosmosDbMongoDb2'"
+		},
+		"CosmosDbMongoDb2_account": {
+			"type": "secureString",
+			"metadata": "Secure string for 'account' of 'CosmosDbMongoDb2'"
+		},
+		"HBase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'HBase1'"
+		},
+		"HBase2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'HBase2'"
+		},
+		"Hive1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Hive1'"
+		},
+		"Sftp1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Sftp1'"
+		},
+		"linkedService1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linkedService1'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storage0922.dfs.core.chinacloudapi.cn/"
+		},
+		"CosmosDbMongoDb1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "db"
+		},
+		"CosmosDbMongoDb2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "db"
+		},
+		"HBase1_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "hbase1025.azurehdinsight.cn"
+		},
+		"HBase1_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "admin"
+		},
+		"HBase2_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "adx1120.azurehdinsight.cn"
+		},
+		"HBase2_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "admin"
+		},
+		"Hive1_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "hdi1023.azurehdinsight.cn"
+		},
+		"Hive1_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "admin"
+		},
+		"Sftp1_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "52.130.153.41"
+		},
+		"Sftp1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "lihong"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "admin"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf1003_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"CosmosDbMongoDb1_connectionString": {
+						"value": "[parameters('CosmosDbMongoDb1_connectionString')]"
+					},
+					"CosmosDbMongoDb1_account": {
+						"value": "[parameters('CosmosDbMongoDb1_account')]"
+					},
+					"CosmosDbMongoDb2_connectionString": {
+						"value": "[parameters('CosmosDbMongoDb2_connectionString')]"
+					},
+					"CosmosDbMongoDb2_account": {
+						"value": "[parameters('CosmosDbMongoDb2_account')]"
+					},
+					"Sftp1_password": {
+						"value": "[parameters('Sftp1_password')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"CosmosDbMongoDb1_properties_typeProperties_database": {
+						"value": "[parameters('CosmosDbMongoDb1_properties_typeProperties_database')]"
+					},
+					"CosmosDbMongoDb2_properties_typeProperties_database": {
+						"value": "[parameters('CosmosDbMongoDb2_properties_typeProperties_database')]"
+					},
+					"Sftp1_properties_typeProperties_host": {
+						"value": "[parameters('Sftp1_properties_typeProperties_host')]"
+					},
+					"Sftp1_properties_typeProperties_userName": {
+						"value": "[parameters('Sftp1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adf1003_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureMySql1_connectionString": {
+						"value": "[parameters('AzureMySql1_connectionString')]"
+					},
+					"HBase1_password": {
+						"value": "[parameters('HBase1_password')]"
+					},
+					"HBase2_password": {
+						"value": "[parameters('HBase2_password')]"
+					},
+					"Hive1_password": {
+						"value": "[parameters('Hive1_password')]"
+					},
+					"linkedService1_password": {
+						"value": "[parameters('linkedService1_password')]"
+					},
+					"HBase1_properties_typeProperties_host": {
+						"value": "[parameters('HBase1_properties_typeProperties_host')]"
+					},
+					"HBase1_properties_typeProperties_username": {
+						"value": "[parameters('HBase1_properties_typeProperties_username')]"
+					},
+					"HBase2_properties_typeProperties_host": {
+						"value": "[parameters('HBase2_properties_typeProperties_host')]"
+					},
+					"HBase2_properties_typeProperties_username": {
+						"value": "[parameters('HBase2_properties_typeProperties_username')]"
+					},
+					"Hive1_properties_typeProperties_host": {
+						"value": "[parameters('Hive1_properties_typeProperties_host')]"
+					},
+					"Hive1_properties_typeProperties_username": {
+						"value": "[parameters('Hive1_properties_typeProperties_username')]"
+					},
+					"linkedService1_properties_typeProperties_userName": {
+						"value": "[parameters('linkedService1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf1003_ArmTemplate_0')]"
+			]
+		}
+	]
+}
