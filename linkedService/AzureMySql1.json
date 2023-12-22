@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "AzureMySql",
 		"typeProperties": {
-			"connectionString": "server=mydemoserver001.mysql.database.chinacloudapi.cn;port=3306;database=testdb;uid=myadmin@mydemoserver001;sslmode=1;usesystemtruststore=1",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3YjUzNDkxZi1jNWQyLTQxMzctOTM4ZS1mMGMxZmE5M2U4YTUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "server=mydemoserver001.mysql.database.chinacloudapi.cn;port=3306;database=testdb;uid=myadmin@mydemoserver001;sslmode=1;usesystemtruststore=0",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyOWQzYzlkZC0xZTM0LTQxNDUtYTAyYy05M2U0MGEzMDVhNGEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime2",

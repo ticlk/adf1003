@@ -22,5 +22,6 @@
 		"typeProperties": {
 			"tableName": "`table1208`"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

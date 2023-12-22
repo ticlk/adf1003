@@ -1,0 +1,21 @@
+{
+	"name": "Odbc1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Odbc",
+		"typeProperties": {
+			"connectionString": {
+				"type": "SecureString",
+				"value": "**********"
+			},
+			"authenticationType": "Basic",
+			"userName": "dbuser@georestoredb",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwMGRjYzM0OC0yYzY3LTQyNmQtYWM5ZC0yYmQ0YjMyMzU1NWEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

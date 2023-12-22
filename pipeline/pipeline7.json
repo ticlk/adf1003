@@ -29,9 +29,8 @@
 						}
 					},
 					"sink": {
-						"type": "AzureMySqlSink",
-						"writeBatchSize": 10000,
-						"writeBatchTimeout": "00:00:30"
+						"type": "OdbcSink",
+						"writeBatchSize": 0
 					},
 					"enableStaging": false,
 					"translator": {
@@ -75,32 +74,14 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureMySqlTable1",
+						"referenceName": "OdbcTable1",
 						"type": "DatasetReference"
 					}
 				]
-			},
-			{
-				"name": "Execute Pipeline1",
-				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "Copy data1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "pipeline6",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
 			}
 		],
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2023-12-14T02:25:32Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }

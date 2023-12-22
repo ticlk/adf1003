@@ -1,0 +1,16 @@
+{
+	"name": "OdbcTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Odbc1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OdbcTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "`table1215`"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
