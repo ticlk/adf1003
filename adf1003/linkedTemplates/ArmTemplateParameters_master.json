@@ -32,6 +32,12 @@
 		"Hive1_password": {
 			"value": ""
 		},
+		"Odbc1_connectionString": {
+			"value": ""
+		},
+		"Odbc1_password": {
+			"value": ""
+		},
 		"Sftp1_password": {
 			"value": ""
 		},
@@ -64,6 +70,9 @@
 		},
 		"Hive1_properties_typeProperties_username": {
 			"value": "admin"
+		},
+		"Odbc1_properties_typeProperties_userName": {
+			"value": "dbuser@georestoredb"
 		},
 		"Sftp1_properties_typeProperties_host": {
 			"value": "52.130.153.41"

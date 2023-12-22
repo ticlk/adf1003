@@ -43,6 +43,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Hive1'"
 		},
+		"Odbc1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Odbc1'"
+		},
+		"Odbc1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Odbc1'"
+		},
 		"Sftp1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'Sftp1'"
@@ -86,6 +94,10 @@
 		"Hive1_properties_typeProperties_username": {
 			"type": "string",
 			"defaultValue": "admin"
+		},
+		"Odbc1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "dbuser@georestoredb"
 		},
 		"Sftp1_properties_typeProperties_host": {
 			"type": "string",
@@ -189,6 +201,12 @@
 					"Hive1_password": {
 						"value": "[parameters('Hive1_password')]"
 					},
+					"Odbc1_connectionString": {
+						"value": "[parameters('Odbc1_connectionString')]"
+					},
+					"Odbc1_password": {
+						"value": "[parameters('Odbc1_password')]"
+					},
 					"linkedService1_password": {
 						"value": "[parameters('linkedService1_password')]"
 					},
@@ -210,6 +228,9 @@
 					"Hive1_properties_typeProperties_username": {
 						"value": "[parameters('Hive1_properties_typeProperties_username')]"
 					},
+					"Odbc1_properties_typeProperties_userName": {
+						"value": "[parameters('Odbc1_properties_typeProperties_userName')]"
+					},
 					"linkedService1_properties_typeProperties_userName": {
 						"value": "[parameters('linkedService1_properties_typeProperties_userName')]"
 					}
@@ -217,6 +238,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'adf1003_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "adf1003_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf1003_ArmTemplate_1')]"
 			]
 		}
 	]
