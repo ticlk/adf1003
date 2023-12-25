@@ -8,6 +8,9 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
 		"AzureMySql1_connectionString": {
 			"value": ""
 		},
@@ -46,6 +49,9 @@
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://storage0922.dfs.core.chinacloudapi.cn/"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "1205-093735-zcdm0bou"
 		},
 		"CosmosDbMongoDb1_properties_typeProperties_database": {
 			"value": "db"

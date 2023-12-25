@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
 		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
 		"AzureMySql1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureMySql1'"
@@ -62,6 +66,10 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storage0922.dfs.core.chinacloudapi.cn/"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1205-093735-zcdm0bou"
 		},
 		"CosmosDbMongoDb1_properties_typeProperties_database": {
 			"type": "string",
@@ -141,6 +149,9 @@
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
 					"CosmosDbMongoDb1_connectionString": {
 						"value": "[parameters('CosmosDbMongoDb1_connectionString')]"
 					},
@@ -158,6 +169,9 @@
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
 					},
 					"CosmosDbMongoDb1_properties_typeProperties_database": {
 						"value": "[parameters('CosmosDbMongoDb1_properties_typeProperties_database')]"
