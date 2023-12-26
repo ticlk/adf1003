@@ -5,10 +5,16 @@
 		"factoryName": {
 			"value": "adf1003"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
 		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricksDeltaLake1_accessToken": {
 			"value": ""
 		},
 		"AzureMySql1_connectionString": {
